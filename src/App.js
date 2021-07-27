@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import { Link, Route, Switch } from "react-router-dom";
+import {  Route, Switch } from "react-router-dom";
 import Profile from "./Profile";
 import axios from  'axios';
 import "./App.css";
