@@ -1,0 +1,28 @@
+
+.container{
+    height: calc(100vh - 12em);
+    display: flex;
+    flex-direction: column;
+
+
+  }
+  
+  .text-section{
+    width: 80%;
+    height: 80%;
+    padding:.5em;
+  }
+  
+  .text-section-paragraph{
+  margin: 1em 0;
+  font-size: 1.4rem;
+  }
+  
+ 
+  .plane-image{
+    filter: drop-shadow(30px 10px 4px #3190CD);
+    width: 250px;
+  
+  }
+  
+ 

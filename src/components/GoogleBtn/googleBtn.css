@@ -1,0 +1,27 @@
+.btn-home {
+  border: none;
+  padding: 1em;
+}
+
+.btn-google {
+  display: flex;
+  font-weight: 700;
+  background: #fff;
+  color: black;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.nav-btn {
+  padding: .5em;
+  border:none;
+}
+
+.nav-icon {
+  width: 20px;
+}
+.btn-icon {
+  width: 30px;
+}
