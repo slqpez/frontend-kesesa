@@ -1,8 +1,6 @@
-import React from "react";
 import plane from "../../images/plane.png";
-import googleIcon from "../../images/google_icon.png"
 import GoogleBtn from "../GoogleBtn/GoogleBtn";
-import "./home.css"
+import "./home.css";
 
 function Home() {
   return (
@@ -14,7 +12,11 @@ function Home() {
             Almacena, gestiona y organiza bien tus viajes a solo un click de
             distancia.
           </p>
-          <GoogleBtn text="Ingresar con Google" typeBtn="btn-home" typeIcon="btn-icon"/>
+          <GoogleBtn
+            text="Ingresar con Google"
+            typeBtn="btn-home"
+            typeIcon="btn-icon"
+          />
         </div>
         <div className="image-section">
           <img className="plane-image" src={plane} alt="plane"></img>

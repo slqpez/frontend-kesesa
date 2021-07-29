@@ -1,3 +1,5 @@
+
+
 .btn-home {
   border: none;
   padding: 1em;
@@ -13,6 +15,11 @@
   gap: 8px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.btn-google:hover{
+  background-color: rgb(223, 250, 252);
 }
 .nav-btn {
   padding: .5em;

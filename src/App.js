@@ -1,62 +1,41 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header/Header"
+import Header from "./components/Header/Header";
 import "./App.css";
-import Body from "./components/Body/Body"
+import Body from "./components/Body/Body";
+import UserContext from "./context/userContext";
+import { getUserLogged } from "../src/services/getUserInfo";
 
-
-/* 
-const Home = ()=> <h1>Welcome to home</h1>
-
- */
+import { useHistory } from "react-router-dom";
 
 //travelbrifing.org
 //http://localhost:5000
 //https://backend-kesesa.herokuapp.com
 
 function App() {
-  /* const [value, setValue] = useState({
-  user:{},
-  error:null,
-  authenticated:false,
-})
+  const [user, setUser] = useState({
+    user: {},
+    authenticated: false,
+  });
 
+  const history = useHistory();
 
-
-console.log(value.authenticated)
-useEffect(() => {
-  fetch("http://localhost:5000/auth/login/success", {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": true
-      }
-    })
-      .then(response => {
-        if (response.status === 200) return response.json();
-        throw new Error("failed to authenticate user");
+  useEffect(() => {
+    getUserLogged()
+      .then((userData) => {
+        setUser({ user: userData.user[0], authenticated: true });
+        history.push("/profile");
       })
-      .then(responseJson => {
-        setValue({
-          authenticated: true,
-          user: responseJson.user
-        });
-      })
-      .catch(error => {
-        setValue({
-          authenticated: false,
-          error: "Failed to authenticate user"
-        });
-      });
-}, [])
- */
+      .catch((err) => history.push("/"));
+  }, [setUser, history]);
+  console.log(user);
 
+  
   return (
     <div className="App">
-      <Header/>
-      <Body/>
-     
+      <UserContext.Provider value={{ user, setUser }}>
+        <Header />
+        <Body />
+      </UserContext.Provider>
     </div>
   );
 }
