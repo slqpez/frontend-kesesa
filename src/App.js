@@ -20,16 +20,23 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
-    getUserLogged()
-      .then((userData) => {
-        setUser({ user: userData.user[0], authenticated: true });
-        history.push("/profile");
-      })
-      .catch((err) => history.push("/"));
+    const authenticatedUSer = Boolean(localStorage.getItem("authenticated"));
+    if (!authenticatedUSer) {
+      getUserLogged()
+        .then((userData) => {
+          setUser({ user: userData.user[0], authenticated: true });
+          localStorage.setItem("user", JSON.stringify(userData.user[0]));
+          localStorage.setItem("authenticated", "true");
+          history.push("/profile");
+        })
+        .catch((err) => history.push("/"));
+    } else {
+      const userLocal = JSON.parse(localStorage.getItem("user"));
+      setUser({ user: userLocal, authenticated: true });
+    }
   }, [setUser, history]);
   console.log(user);
 
-  
   return (
     <div className="App">
       <UserContext.Provider value={{ user, setUser }}>
