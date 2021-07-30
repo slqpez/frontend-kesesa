@@ -6,7 +6,7 @@ import "./header.css";
 
 const Header = () => {
   const {
-    user: { authenticated },
+    user: { authenticated, user },
   } = useContext(UserContext);
 
   function handleLogoutClick() {
@@ -20,10 +20,18 @@ const Header = () => {
         {authenticated ? (
           <ul className="nav-list">
             <li>
-              <Link to="/profile">Perfil</Link>
+              <Link to="/documents">Documentos</Link>
             </li>
             <li>
               <Link to="/infoCountries">¿Dónde viajar?</Link>
+            </li>
+            <li className="userInfo">
+              <span>{user.name}</span>
+              <img
+                className="profile-picture"
+                src={user.profileImage}
+                alt="profile"
+              />
             </li>
             <li>
               {authenticated ? (

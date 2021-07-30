@@ -1,8 +1,12 @@
-import plane from "../../images/plane.png";
-import GoogleBtn from "../GoogleBtn/GoogleBtn";
+
+import { useContext } from "react";
+import plane from "../../../images/plane.png";
+import GoogleBtn from "../../GoogleBtn/GoogleBtn";
+import UserContext from "../../../context/userContext";
 import "./home.css";
 
 function Home() {
+  const {user:{authenticated}}=useContext(UserContext)
   return (
     <div>
       <div className="container">
@@ -12,11 +16,11 @@ function Home() {
             Almacena, gestiona y organiza bien tus viajes a solo un click de
             distancia.
           </p>
-          <GoogleBtn
+         {authenticated?null: <GoogleBtn
             text="Ingresar con Google"
             typeBtn="btn-home"
             typeIcon="btn-icon"
-          />
+          />} 
         </div>
         <div className="image-section">
           <img className="plane-image" src={plane} alt="plane"></img>

@@ -1,0 +1,84 @@
+.Documents {
+  display: flex;
+  gap: 40px;
+}
+
+.add-document-section {
+  width: 30%;
+}
+
+.form-document {
+  background-color: #fff;
+  color: #3190CD;
+  padding: 2em;
+  display: flex;
+  font-size: 1.1rem;
+  flex-direction: column;
+  gap:1em;
+  border-radius: 8px;
+  
+}
+
+.input-name-document{
+    border: 1px solid #3190CD;
+    outline: none;
+    padding:5px 10px;
+    color: #3190CD;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+.label-name-document{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.btn-save-document{
+    background-color: rgb(48, 145, 72);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: .9em;
+    width:100%;
+    margin: 0 auto;
+    padding:8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-save-document:hover{
+    background-color: rgba(48, 145, 72,.9)
+}
+
+.documents-list-section{
+    text-align: center;
+    width:70%;
+}
+
+/*-----------------------------------------------------*/
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+  }
+
+  .label{
+    display: block;
+    position: relative;
+    width: auto;
+    height: 50px;
+    border-radius: 5px;
+    background:  #3190CD url("../../../images/upload.ico") no-repeat;
+    background-size:30px;
+    background-position:10px 10px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+  }

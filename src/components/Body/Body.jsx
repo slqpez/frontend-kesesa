@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "./Home";
-import Profile from "../Profile/Profile";
+import Home from "./Home/Home";
+import Documents from "./Documents/Documents";
 import UserContext from "../../context/userContext";
 import InfoCountries from "./InfoCountries/InfoCountries";
 
@@ -16,8 +16,8 @@ export default function Body() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/profile">
-          {authenticated ? <Profile /> : <Home />}
+        <Route exact path="/documents">
+          {authenticated ? <Documents /> : <Home />}
         </Route>
         <Route exact path="/about">
           <Home />

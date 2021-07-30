@@ -27,7 +27,7 @@ function App() {
           setUser({ user: userData.user[0], authenticated: true });
           localStorage.setItem("user", JSON.stringify(userData.user[0]));
           localStorage.setItem("authenticated", "true");
-          history.push("/profile");
+          history.push("/documents");
         })
         .catch((err) => history.push("/"));
     } else {
