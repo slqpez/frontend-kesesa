@@ -1,5 +1,5 @@
 //import React,{useState, useEffect} from 'react'
-//import {getInfoCountries} from "../../../services/infoCountry"
+//import {getInfoCountries} from "services/infoCountry"
 
 function InfoCountries() {
 

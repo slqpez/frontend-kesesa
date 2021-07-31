@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
+import DocumentsList from "components/DocumentsList/DocumentsList";
+import FormAddCocument from "components/FormAddDocument/FormAddCocument";
+import Spinner from "components/Spinner/Spinner";
+import Message from "components/utils/Message/Message"
+import UserContext from "context/userContext";
+import { getDocuments } from "services/getDocuments";
+import { uploadDocument } from "services/uploadDocument";
 import "./documents.css";
-import UserContext from "../../../context/userContext";
-import { uploadDocument } from "../../../services/uploadDocument";
-import DocumentsList from "../../DocumentsList/DocumentsList";
-import FormAddCocument from "../../FormAddDocument/FormAddCocument";
-import { getDocuments } from "../../../services/getDocuments";
-import Spinner from "../../Spinner/Spinner";
-import Message from "../../utils/Message/Message"
 
 function Documents() {
   const {

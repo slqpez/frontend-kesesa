@@ -1,5 +1,5 @@
 import React from "react";
-import PreviewDocument from "../PreviewDocument/PreviewDocument";
+import PreviewDocument from "components/PreviewDocument/PreviewDocument";
 import "./documentsList.css"
 
 function DocumentsList({ documents }) {

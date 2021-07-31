@@ -1,5 +1,5 @@
 import React from 'react'
-import googleIcon from "../../images/google_icon.png"
+import googleIcon from "images/google_icon.png"
 import "./googleBtn.css"
 
 function GoogleBtn({text, typeBtn, typeIcon}) {

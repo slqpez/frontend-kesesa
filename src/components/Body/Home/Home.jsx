@@ -1,8 +1,8 @@
 
 import { useContext } from "react";
-import plane from "../../../images/plane.png";
-import GoogleBtn from "../../GoogleBtn/GoogleBtn";
-import UserContext from "../../../context/userContext";
+import GoogleBtn from "components/GoogleBtn/GoogleBtn";
+import UserContext from "context/userContext";
+import plane from "images/plane.png";
 import "./home.css";
 
 function Home() {

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import GoogleBtn from "../GoogleBtn/GoogleBtn";
-import UserContext from "../../context/userContext";
+import GoogleBtn from "components/GoogleBtn/GoogleBtn";
+import UserContext from "context/userContext";
 import "./header.css";
 
 const Header = () => {

@@ -1,5 +1,7 @@
+const BASE_URL = "http://localhost:5000"
+
 export function getDocuments(data){
-    return fetch("http://localhost:5000/documents/getDocuments", {
+    return fetch(`${BASE_URL}/documents/getDocuments`, {
      method:"POST",
      headers: {
       'Content-Type': 'application/json',

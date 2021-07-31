@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from "./Home/Home";
-import Documents from "./Documents/Documents";
-import UserContext from "../../context/userContext";
-import InfoCountries from "./InfoCountries/InfoCountries";
+import Documents from "components/Body/Documents/Documents";
+import Home from "components/Body/Home/Home";
+import InfoCountries from "components/Body/InfoCountries/InfoCountries";
+import UserContext from "context/userContext";
 
 export default function Body() {
   const {user,

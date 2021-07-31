@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header/Header";
-import "./App.css";
-import Body from "./components/Body/Body";
-import UserContext from "./context/userContext";
-import { getUserLogged } from "../src/services/getUserInfo";
-
 import { useHistory } from "react-router-dom";
+import Body from "components/Body/Body";
+import Header from "components/Header/Header";
+import UserContext from "context/userContext";
+import { getUserLogged } from "services/getUserInfo";
+
+import "./App.css";
 
 //travelbrifing.org
 //http://localhost:5000
