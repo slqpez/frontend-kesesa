@@ -1,0 +1,22 @@
+.react-pdf__Page {
+    background-color: rgb(198, 228, 228);
+    box-shadow: 2px 2px 8px 2px black;
+    width:220px;
+    height:220px;
+    display:flex;
+    justify-content: center;
+    padding:10px;
+    
+  } 
+  
+  
+
+  .react-pdf__Page__canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+   .react-pdf__Page__textContent{
+    display:none
+  } 
+  

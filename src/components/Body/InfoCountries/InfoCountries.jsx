@@ -1,14 +1,14 @@
-import React,{useState, useEffect} from 'react'
-import {getInfoCountries} from "../../../services/infoCountry"
+//import React,{useState, useEffect} from 'react'
+//import {getInfoCountries} from "../../../services/infoCountry"
 
 function InfoCountries() {
 
-const [info, setInfo] = useState()
+//const [info, setInfo] = useState()
 
-    useEffect(()=>{
+  /*   useEffect(()=>{
        getInfoCountries("argentina")
        .then(data=> console.log(data))
-    },[])
+    },[]) */
     return (
         <div>
             Información de los países

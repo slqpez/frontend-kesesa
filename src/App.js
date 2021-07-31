@@ -35,7 +35,7 @@ function App() {
       setUser({ user: userLocal, authenticated: true });
     }
   }, [setUser, history]);
-  console.log(user);
+ 
 
   return (
     <div className="App">

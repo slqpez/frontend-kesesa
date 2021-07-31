@@ -6,9 +6,10 @@ import UserContext from "../../context/userContext";
 import InfoCountries from "./InfoCountries/InfoCountries";
 
 export default function Body() {
-  const {
+  const {user,
     user: { authenticated },
   } = useContext(UserContext);
+console.log(user)
 
   return (
     <div>
