@@ -3,13 +3,13 @@ import { Document, pdfjs, Page } from "react-pdf";
 import "./previewDocument.css"
 
 
-function PreviewDocument() {
+function PreviewDocument({url}) {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   return (
     <div>
       <Document
-        file="  https://res.cloudinary.com/slqpez/image/upload/v1627678168/documents/qur4fxtojm8h8yltb4jm.pdf"
+        file={url}
         noData={
           <div
             style={{ float: "left", marginLeft: "50%", marginTop: "10%" }}
