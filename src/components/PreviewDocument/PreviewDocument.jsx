@@ -1,14 +1,15 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 import { Document, pdfjs, Page } from "react-pdf";
-import "./previewDocument.css"
+import "./previewDocument.css";
 
 
-function PreviewDocument({url, id}) {
+function PreviewDocument({url, id, handleDelete}) {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   return (
-    <Link to={`/document/${id}`}>
+    <div>
+      <Link to={`/document/${id}`}>
       <Document
         file={url}
         noData={
@@ -20,6 +21,8 @@ function PreviewDocument({url, id}) {
         <Page pageNumber={1} style={{ width: "300px" }} />
       </Document>
     </Link>
+    <button onClick={handleDelete} className="btn-delete">Eliminar</button>
+    </div>
   );
 }
 

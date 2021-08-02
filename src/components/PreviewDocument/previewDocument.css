@@ -18,4 +18,13 @@
    .react-pdf__Page__textContent{
     display:none
   } 
+
+  .btn-delete{
+    background-color: rgb(163, 16, 16);
+    margin-top: 30px;
+    color:white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+  }
   
