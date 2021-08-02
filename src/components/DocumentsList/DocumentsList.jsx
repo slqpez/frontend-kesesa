@@ -6,7 +6,7 @@ function DocumentsList({ documents }) {
   return (
     <div className="DocumentList">
       {documents.map((document) => (
-        <PreviewDocument url={document.url} key={document._id} />
+        <PreviewDocument url={document.url} key={document._id} id={document._id}/>
       ))}
     </div>
   );

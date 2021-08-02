@@ -4,6 +4,7 @@ import Documents from "components/Body/Documents/Documents";
 import Home from "components/Body/Home/Home";
 import InfoCountries from "components/Body/InfoCountries/InfoCountries";
 import UserContext from "context/userContext";
+import FullDocument from "components/Body/FullDocument/FullDocument";
 
 export default function Body() {
   const {user,
@@ -25,6 +26,9 @@ console.log(user)
         </Route>
         <Route exact path="/infoCountries">
           {authenticated ? <InfoCountries /> : <Home />}
+        </Route>
+        <Route exact path="/document/:id">
+          {authenticated ? <FullDocument /> : <Home />}
         </Route>
       </Switch>
     </div>

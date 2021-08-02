@@ -1,13 +1,14 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import { Document, pdfjs, Page } from "react-pdf";
 import "./previewDocument.css"
 
 
-function PreviewDocument({url}) {
+function PreviewDocument({url, id}) {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   return (
-    <div>
+    <Link to={`/document/${id}`}>
       <Document
         file={url}
         noData={
@@ -18,7 +19,7 @@ function PreviewDocument({url}) {
       >
         <Page pageNumber={1} style={{ width: "300px" }} />
       </Document>
-    </div>
+    </Link>
   );
 }
 

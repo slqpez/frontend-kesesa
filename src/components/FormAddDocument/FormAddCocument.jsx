@@ -2,7 +2,7 @@ import React from "react";
 import "./formAddDocument.css"
 
 
-function FormAddCocument({addDocument, handleName, handleFile}) {
+function FormAddCocument({addDocument, handleName, handleFile, value}) {
   return (
     <div>
       <form className="form-document" action="" onSubmit={addDocument}>
@@ -15,6 +15,7 @@ function FormAddCocument({addDocument, handleName, handleFile}) {
           type="text"
           name="document-name"
           onChange={handleName}
+          value={value}
         />
         <label htmlFor="file" className="label">
           Selecciona un archivo
