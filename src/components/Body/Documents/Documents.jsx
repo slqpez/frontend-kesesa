@@ -100,7 +100,6 @@ function Documents() {
       </section>
       <section className="documents-list-section">
         <DocumentsList isLoading={isLoading} documentAdded={documentAdded}  />
-
       </section>
     </div>
   );

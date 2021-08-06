@@ -24,6 +24,9 @@ console.log(user)
         <Route exact path="/about">
           <Home />
         </Route>
+        <Route exact path="/advice">
+          <Home />
+        </Route>
         <Route exact path="/infoCountries">
           {authenticated ? <InfoCountries /> : <Home />}
         </Route>
