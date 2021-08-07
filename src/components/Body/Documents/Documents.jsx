@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import DocumentsList from "components/DocumentsList/DocumentsList";
 import FormAddCocument from "components/FormAddDocument/FormAddCocument";
 import Spinner from "components/Spinner/Spinner";
@@ -16,8 +16,8 @@ function Documents() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [documentAdded, setDocumentAdded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [message, setMessage] = useState({
+/*   const [error, setError] = useState(false);*/
+ const [message, setMessage] = useState({
     show: false,
     type: "",
     content: "",
@@ -70,8 +70,9 @@ function Documents() {
       setMessage({
         show: true,
         type: "error",
-        content: "No se pudo agregar el documento.",
+        content: `No se pudo agregar el documento`,
       });
+
     }
 
     setTimeout(() => {
