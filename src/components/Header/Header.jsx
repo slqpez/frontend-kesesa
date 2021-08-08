@@ -10,7 +10,7 @@ const Header = () => {
   } = useContext(UserContext);
 
   function handleLogoutClick() {
-    window.open("http://localhost:5000/auth/logout", "_self");
+    window.open("/auth/logout", "_self");
     localStorage.clear();
   }
 

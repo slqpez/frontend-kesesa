@@ -1,7 +1,7 @@
-const BASE_URL = "http://localhost:5000"
+//const BASE_URL = "http://localhost:5000"
 
 export function getUserLogged(){
-    return fetch(`${BASE_URL}/auth/login/success`, {
+    return fetch(`/auth/login/success`, {
         method: "GET",
         credentials: "include",
         headers: {
