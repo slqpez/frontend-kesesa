@@ -19,3 +19,12 @@ export async function getDocument(id){
    body:JSON.stringify({id})
  })
 }
+
+export async function deleteDocument(id){
+  return fetch(`${BASE_URL}/documents/deleteDocument/${id}`, {
+   method:"DELETE",
+   headers: {
+    'Content-Type': 'application/json',
+  }
+ })
+}

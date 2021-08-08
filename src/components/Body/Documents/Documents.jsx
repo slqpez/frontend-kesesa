@@ -1,10 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import DocumentsList from "components/DocumentsList/DocumentsList";
 import FormAddCocument from "components/FormAddDocument/FormAddCocument";
 import Spinner from "components/Spinner/Spinner";
 import Message from "components/utils/Message/Message";
 import UserContext from "context/userContext";
-import { getDocuments } from "services/getDocuments";
 import { uploadDocument } from "services/uploadDocument";
 import "./documents.css";
 
@@ -15,25 +14,16 @@ function Documents() {
 
   const [name, setName] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
-  const [documents, setDocuments] = useState([]);
   const [documentAdded, setDocumentAdded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [message, setMessage] = useState({
+/*   const [error, setError] = useState(false);*/
+ const [message, setMessage] = useState({
     show: false,
     type: "",
     content: "",
   });
 
-  useEffect(() => {
-    const data = { userId: user._id };
-    getDocuments(data)
-      .then((response) => response.json())
-      .then((data) => {
-        setDocuments(data);
-      })
-      .catch((err) => console.log(err));
-  }, [user._id, documentAdded, isLoading]);
+ 
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -80,8 +70,9 @@ function Documents() {
       setMessage({
         show: true,
         type: "error",
-        content: "No se pudo agregar el documento.",
+        content: `No se pudo agregar el documento`,
       });
+
     }
 
     setTimeout(() => {
@@ -109,7 +100,7 @@ function Documents() {
         ></Message>
       </section>
       <section className="documents-list-section">
-        <DocumentsList documents={documents} />
+        <DocumentsList isLoading={isLoading} documentAdded={documentAdded}  />
       </section>
     </div>
   );

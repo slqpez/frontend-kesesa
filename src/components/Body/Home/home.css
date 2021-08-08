@@ -1,31 +1,207 @@
-
-.container{
-    height: calc(100vh - 12em);
-    display: flex;
-
-  }
+@media screen and (min-width:768px){
   
-  .text-section{
-    width: 40%;
-    height: 80%;
-    padding:.5em;
-  }
-  
-  .text-section-paragraph{
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px,1fr));
+}
+
+.grid-item{
+  margin-top: 2vh;
+}
+
+
+
+
+.grid-item h1{
+  text-align: center;
+  padding-bottom: 1.5vh;
+}
+
+.grid-item p{
+  position: relative;
+  text-align: center;
+  padding-bottom: 1.5vh;
+
+}
+
+.text-section-paragraph{
   margin: 1em 0;
   font-size: 1.4rem;
-  }
-  
- .image-section{
-   display: flex;
-   align-self: flex-end;
-   justify-content: flex-start;
+}
+.btn-home{
+  width: 15vw;
+  position: relative;
+  margin: 0 auto;
+  min-width: 160px;
+  max-width: 210px;
+}
 
- }
-  .plane-image{
-    filter: drop-shadow(30px 10px 4px #3190CD);
-    width: 900px;
+.plane-image{
+  filter: drop-shadow(30px 10px 4px #3190CD);
+  width: 100%;
+  max-width: 800px;
+  padding-top: 5vh;
+}
+
+.image-section{
+  animation-name: fly;
+  animation-duration: 2.6s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fly{
+  from{
+    position: relative;
+    left: -90vw;
+    bottom: -43vh;
+  }
+
+  to{
+    left: 0;
+    position: relative;
+    bottom: 0;
+  }
+}
+
+}
+
+
+@media screen and (min-width:480px) and (max-width:767px) {
+  
+.grid-container{
+  display: block;
+}
+
+.grid-item{
+  margin-top: 2vh;
+  max-width: 767px;
+}
+
+
+.text-section-paragraph{
+  margin: 1em 0;
+  font-size: 1.4rem;
+}
+
+.grid-item h1{
+  text-align: center;
+  padding-bottom: 1.5vh;
+}
+
+.grid-item p{
+  position: relative;
+  text-align: center;
+  padding-bottom: 1.5vh;
+
+}
+
+.btn-home{
+  width: 15vw;
+  position: relative;
+  margin: 0 auto;
+  min-width: 160px;
+  max-width: 210px;
+}
+
+.plane-image{
+  margin-top: 4vh;
+  filter: drop-shadow(30px 10px 4px #3190CD);
+  width: 100%;
+}
+
+.image-section{
+  animation-name: fly;
+  animation-duration: 2.6s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fly{
+  from{
+    position: relative;
+    left: -90vw;
+    bottom: -10vh;
+  }
+
+  to{
+    left: 0;
+    position: relative;
+    bottom: 0;
+  }
+}
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:0px) and (max-width:479px) {
+  
+  .grid-container{
+    display: block;
+  }
+  
+  .grid-item{
+    margin-top: 2vh;
+    min-height: 200px;
+  }
+  
+  
+  .text-section-paragraph{
+    margin: 1em 0;
+    font-size: 1.4rem;
+  }
+  
+  .grid-item h1{
+    text-align: center;
+    padding-bottom: 1.5vh;
+    font-size: 1.3em;
+  }
+  
+  .grid-item p{
+    position: relative;
+    text-align: center;
+    padding-bottom: 1.5vh;
+    font-size: 1em;
   
   }
   
- 
+  .btn-home{
+    width: 10vw;
+    position: relative;
+    margin: 0 auto;
+    min-width: 160px;
+    max-width: 210px;
+  }
+  
+  .plane-image{
+    margin-top: 8vh;
+    filter: drop-shadow(30px 10px 4px #3190CD);
+    width: 100%;
+  }
+  
+  .image-section{
+    animation-name: fly;
+    animation-duration: 2.6s;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes fly{
+    from{
+      position: relative;
+      left: -90vw;
+      bottom: -11vh;
+    }
+  
+    to{
+      left: 0;
+      position: relative;
+      bottom: 0;
+    }
+  }
+  
+  }
