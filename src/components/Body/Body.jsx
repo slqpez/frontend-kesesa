@@ -14,6 +14,9 @@ export default function Body() {
   } = useContext(UserContext);
 console.log(user)
 
+
+
+
   return (
     <div>
       <Switch>

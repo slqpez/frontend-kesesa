@@ -5,11 +5,11 @@
     display: flex;
 }
 
-.tip-list{
+.aside__tip-list{
     flex-grow: 0.1;
 }
 
-.tip-list__ul{
+.aside__tip-list-ul{
     border: 5px solid grey;
 }
 
