@@ -81,7 +81,7 @@ function handleClose(){
                 <Link to="/about">Acerca de</Link>
               </li>
               <li>
-                <Link to="/advice">Tips de Viaje</Link>
+                <Link to="/travelTips">Tips de Viaje</Link>
               </li>
               <li>
                 <GoogleBtn
