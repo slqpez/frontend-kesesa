@@ -1,6 +1,6 @@
 @media screen and (min-width:768px){
   .btn-open-menu, .btn-close-menu{
-    display: none;
+    display: flex;
   }
 
   .nav-bar {

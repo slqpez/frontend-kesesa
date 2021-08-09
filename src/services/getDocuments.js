@@ -1,7 +1,7 @@
-//const BASE_URL = "http://localhost:5000"
+const BASE_URL = "http://localhost:5000"
 
 export async function getDocuments(data){
-    return fetch(`/documents/getDocuments`, {
+    return fetch(`${BASE_URL}/documents/getDocuments`, {
      method:"POST",
      headers: {
       'Content-Type': 'application/json',
@@ -11,7 +11,7 @@ export async function getDocuments(data){
 }
 
 export async function getDocument(id){
-  return fetch(`/documents/getDocument`, {
+  return fetch(`${BASE_URL}/documents/getDocument`, {
    method:"POST",
    headers: {
     'Content-Type': 'application/json',

@@ -7,28 +7,26 @@ import logo from "images/logo_size.png";
 import hamburger from "images/hamburger-icon.svg";
 import cerrar from "images/cerrar.svg";
 
-
-
 const Header = () => {
   const {
     user: { authenticated, user },
   } = useContext(UserContext);
 
   function handleLogoutClick() {
-    window.open("/auth/logout", "_self");
+    window.open("http://localhost:5000/auth/logout", "_self");
     localStorage.clear();
   }
 
-const [show, setShow] = useState('');
+  const [show, setShow] = useState("");
 
-function handleBurger(){
-  setShow('show');
-}
+  function handleBurger() {
+    setShow("show");
+  }
 
-function handleClose(){
-  setShow('');
-}
-  
+  function handleClose() {
+    setShow("");
+  }
+
   return (
     <div className="container-nav-bar">
       <nav className="nav-bar">
@@ -65,12 +63,14 @@ function handleClose(){
         ) : (
           <div className="top-nav">
             <div className="logo-container">
-              <a href="/"><img src={logo} alt="Kesesa.png" className="logo" /></a>
+              <a href="/">
+                <img src={logo} alt="Kesesa.png" className="logo" />
+              </a>
             </div>
             <button className="btn-open-menu" onClick={handleBurger}>
               <img src={hamburger} alt="Abrir Menu" />
             </button>
-              <ul className={`nav-list ${show}`}>
+            <ul className={`nav-list ${show}`}>
               <button className="btn-close-menu" onClick={handleClose}>
                 <img src={cerrar} alt="Cerrar Menu" />
               </button>
@@ -91,7 +91,6 @@ function handleClose(){
                 />
               </li>
             </ul>
-   
           </div>
         )}
       </nav>
