@@ -16,8 +16,7 @@ function Documents() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [documentAdded, setDocumentAdded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-/*   const [error, setError] = useState(false);*/
- const [message, setMessage] = useState({
+  const [message, setMessage] = useState({
     show: false,
     type: "",
     content: "",

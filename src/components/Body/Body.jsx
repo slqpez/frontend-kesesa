@@ -5,12 +5,17 @@ import Home from "components/Body/Home/Home";
 import InfoCountries from "components/Body/InfoCountries/InfoCountries";
 import UserContext from "context/userContext";
 import FullDocument from "components/Body/FullDocument/FullDocument";
+import About from "components/Body/About/About";
+import TravelTips from "components/Body/TravelTips/TravelTips";
 
 export default function Body() {
   const {user,
     user: { authenticated },
   } = useContext(UserContext);
 console.log(user)
+
+
+
 
   return (
     <div>
@@ -22,10 +27,10 @@ console.log(user)
           {authenticated ? <Documents /> : <Home />}
         </Route>
         <Route exact path="/about">
-          <Home />
+          <About />
         </Route>
-        <Route exact path="/advice">
-          <Home />
+        <Route exact path="/travelTips">
+          <TravelTips />
         </Route>
         <Route exact path="/infoCountries">
           {authenticated ? <InfoCountries /> : <Home />}
