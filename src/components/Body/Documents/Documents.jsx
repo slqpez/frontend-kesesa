@@ -22,8 +22,6 @@ function Documents() {
     content: "",
   });
 
- 
-
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -34,18 +32,18 @@ function Documents() {
   const addDocument = async (e) => {
     e.preventDefault();
     if (!selectedFile) {
-       setMessage({
+      setMessage({
         show: true,
         type: "error",
         content: "No seleccionaste ningún archivo.",
-      }) 
+      });
       setTimeout(() => {
-        setMessage({ 
+        setMessage({
           show: false,
-          ...message
-        })
-      }, 3000); 
-      return
+          ...message,
+        });
+      }, 3000);
+      return;
     }
     const userId = user._id;
 
@@ -71,7 +69,6 @@ function Documents() {
         type: "error",
         content: `No se pudo agregar el documento`,
       });
-
     }
 
     setTimeout(() => {
@@ -99,7 +96,7 @@ function Documents() {
         ></Message>
       </section>
       <section className="documents-list-section">
-        <DocumentsList isLoading={isLoading} documentAdded={documentAdded}  />
+        <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
       </section>
     </div>
   );

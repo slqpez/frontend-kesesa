@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Documents from "components/Body/Documents/Documents";
 import Home from "components/Body/Home/Home";
@@ -6,6 +6,7 @@ import InfoCountries from "components/Body/InfoCountries/InfoCountries";
 import UserContext from "context/userContext";
 import FullDocument from "components/Body/FullDocument/FullDocument";
 import About from "components/Body/About/About";
+import Travels from "components/Body/Travels/Travels"
 import TravelTips from "components/Body/TravelTips/TravelTips";
 
 export default function Body() {
@@ -15,7 +16,11 @@ export default function Body() {
 console.log(user)
 
 
-
+useEffect(() => {
+  let path = window.location.pathname.split("/")[1]
+  let title = path.charAt(0).toUpperCase() + path.slice(1)
+  document.title = `Kesesa | ${title}`;
+});
 
   return (
     <div>
@@ -23,9 +28,13 @@ console.log(user)
         <Route exact path="/">
           <Home />
         </Route>
+        <Route exact path="/travels">
+          {authenticated ? <Travels /> : <Home />}
+        </Route>
         <Route exact path="/documents">
           {authenticated ? <Documents /> : <Home />}
         </Route>
+        
         <Route exact path="/about">
           <About />
         </Route>
