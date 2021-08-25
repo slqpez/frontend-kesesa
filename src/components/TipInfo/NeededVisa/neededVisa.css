@@ -1,0 +1,15 @@
+h2 {
+    display: none;
+}
+
+@media screen and (min-width:0px) and (max-width:767px){
+
+    .title__container{
+        text-align: center;
+    }
+    h2{
+        display: block;
+        font-size: 1.95em;
+    }
+
+}

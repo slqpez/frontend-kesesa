@@ -1,7 +1,6 @@
 .tips-container{
     width: 100%;
     height: 100%;
-    border: 2px solid red;
     display: flex;
 }
 
@@ -10,11 +9,108 @@
 }
 
 .aside__tip-list-ul{
-    border: 5px solid grey;
+    cursor: pointer;
+}
+
+.aside__tip-list-ul li{
+    margin-bottom: 2vh;
+
 }
 
 .tip-detailed{
-    border: 5px solid green;
-    flex-grow: 1;
+    flex-grow: 0.9;
     margin-left: 3vw;
 }
+
+.aside__tip-list-btn{
+    display: none;
+}
+
+
+@media screen and (min-width:1px) and (max-width:767px) {
+
+
+    .tips-container{
+        display: block;
+    }
+
+    .title_tips-list-mobile-conteiner{
+        font-size: 0.6em;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        padding-bottom: 2vh;
+    }
+
+    .title__tip-list-mobile{
+        display: block;
+    }
+
+    .aside__tip-list{   
+        display: none;
+        position: fixed;
+        width: max-content;
+        height: max-content;
+        background-color:  #256C99;
+        z-index: 40;
+        overflow-y: auto;
+        left: 0;
+        border-radius: 4%;
+    }
+
+    .aside__tip-list-ul{
+        margin: 10px;
+        background-color: #12364D;
+        border-radius: 4%;
+    }
+
+
+    .aside__tip-list-ul li{
+        margin-bottom: 0vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+
+    .aside__tip-list-ul li:hover{
+        background: #73AFD5;
+        border-radius: 5%;
+    }
+
+
+    .tip-detailed{
+        display: block;
+    }
+
+    .aside__tip-list-btn{
+        display: inline-block;
+        cursor: pointer;
+        width: 5em;
+        height: 5em;
+        margin: 0 -3em;
+    }
+
+    .showTip{
+        display: block;
+    }
+
+
+}
+
+
+/* @media screen and (min-width:0px) and (max-width:479px) {
+
+    .tips-container{
+        display: block;
+    }
+    
+    .tip-detailed{
+        display: block;
+        margin-left: 0;
+    }
+
+    
+    
+} */

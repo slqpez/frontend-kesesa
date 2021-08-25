@@ -38,6 +38,9 @@ const Header = () => {
             <li>
               <Link to="/infoCountries">¿Dónde viajar?</Link>
             </li>
+            <li>
+              <Link to="/travelTips">Tips de viaje</Link>
+            </li>
             <li className="userInfo">
               <span>{user.name}</span>
               <img
@@ -75,13 +78,13 @@ const Header = () => {
                 <img src={cerrar} alt="Cerrar Menu" />
               </button>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={handleClose}>Home</Link>
               </li>
               <li>
-                <Link to="/about">Acerca de</Link>
+                <Link to="/about"onClick={handleClose}>Acerca de</Link>
               </li>
               <li>
-                <Link to="/travelTips">Tips de Viaje</Link>
+                <Link to="/travelTips" onClick={handleClose}>Tips de Viaje</Link>
               </li>
               <li>
                 <GoogleBtn

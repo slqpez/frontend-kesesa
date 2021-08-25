@@ -1,32 +1,53 @@
 import React, {useState} from 'react';
 import "./travelTips.css";
 import TipInfo from "components/TipInfo/TipInfo";
+import travelTipsBtnMenu from "images/travel-tips-menu.svg";
+
 
 function TravelTips(){
 
     const [toShow, setToShow] = useState("");
       
-    function handleShow(e){
+    function handleShowTip(e){
         setToShow(e.target.id);
+        handleTipsBtnMenuClose();
+    }
+
+    const [showTip, setShowTip] = useState("");
+
+    function handleTipsBtnMenu(){
+        if(showTip === "showTip"){
+            handleTipsBtnMenuClose();
+            return
+        }
+        setShowTip("showTip")
+    }
+
+    function handleTipsBtnMenuClose(){
+        setShowTip("")
     }
 
 
 
     return(
         <div className="tips-container">
-            <aside className="aside__tip-list">
+            <button className="aside__tip-list-btn" onClick={handleTipsBtnMenu}>
+                <img src={travelTipsBtnMenu} alt="Abrir tips Menu" />
+            </button>
+            <aside className={`aside__tip-list ${showTip}`}>
+                <div className="title_tips-list-mobile-conteiner">
+                    <h2 className="title__tip-list-mobile">Conoce algunos tips: </h2>   
+                </div>
                 <ul className="aside__tip-list-ul">
-                    <li onClick={handleShow} id="1" name="1">1- Atención con la maleta</li>
-                    <li onClick={handleShow} id="2" name="2">2- Cuidado con el pasaporte</li>
-                    <li onClick={handleShow} id="3" name="3">3- Verifica si necesitas visado</li>
-                    <li onClick={handleShow} id="4" name="4">4- Enfermedades en el extranjero</li>
-                    <li onClick={handleShow} id="5" name="5">5- ¿Agua potable?</li>
+                    <li onClick={handleShowTip} id="1" name="1">Atención con la maleta</li>
+                    <li onClick={handleShowTip} id="2" name="2">Cuidado con el pasaporte</li>
+                    <li onClick={handleShowTip} id="3" name="3">Verifica si necesitas visado</li>
+                    <li onClick={handleShowTip} id="4" name="4">Enfermedades en el extranjero</li>
                 </ul>
             </aside>
             <div className="tip-detailed">
                 <TipInfo number={toShow}></TipInfo>
             </div>
-
         </div>
     )
 }
