@@ -29,7 +29,7 @@ function FullDocument() {
       >
         <Page pageNumber={1} style={{ width: "1000px" }} />
       </Document>
-      <button className="back" onClick={() => history.push("/documents")}>Volver</button>
+      <button className="back" onClick={() => history.goBack()}>Volver</button>
     </div>
   );
 }
