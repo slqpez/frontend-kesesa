@@ -33,7 +33,7 @@ const Header = () => {
         {authenticated ? (
           <ul className="nav-list">
             <li>
-              <Link to="/documents">Documentos</Link>
+              <Link to="/travels">Mis viajes</Link>
             </li>
             <li>
               <Link to="/infoCountries">¿Dónde viajar?</Link>

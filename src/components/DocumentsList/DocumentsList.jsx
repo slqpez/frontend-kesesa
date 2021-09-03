@@ -4,6 +4,7 @@ import "./documentsList.css"
 import {deleteDocument} from "services/getDocuments";
 import UserContext from "context/userContext";
 import {getDocuments} from "services/getDocuments";
+import {useParams} from "react-router-dom"
 
 
 
@@ -14,13 +15,17 @@ function DocumentsList({documentAdded, isLoading }) {
     user: { user },
   } = useContext(UserContext);
 
+
+  const {travelId} = useParams()
+
+  console.log(travelId)
   async function handleDelete () {
     await deleteDocument(documents[0]._id);
     setDelete(true);
   }
 
   useEffect(() => {
-    const data = { userId: user._id };
+    const data = { travelId };
     getDocuments(data)
       .then((response) => response.json())
       .then((data) => {
@@ -28,7 +33,7 @@ function DocumentsList({documentAdded, isLoading }) {
         setDelete(false);
       })
       .catch((err) => console.log(err));
-  }, [user._id, documentAdded, isLoading, deleteThis]);
+  }, [travelId, documentAdded, isLoading, deleteThis]);
 
 
   return (

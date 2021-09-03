@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import {useParams} from "react-router-dom"
 import DocumentsList from "components/DocumentsList/DocumentsList";
 import FormAddCocument from "components/FormAddDocument/FormAddCocument";
 import Spinner from "components/Spinner/Spinner";
@@ -11,6 +12,8 @@ function Documents() {
   const {
     user: { user },
   } = useContext(UserContext);
+
+  let { travelId } = useParams();
 
   const [name, setName] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
@@ -53,6 +56,7 @@ function Documents() {
     formData.append("file", selectedFile);
     formData.append("name", name);
     formData.append("userId", userId);
+    formData.append("travelId", travelId);
     try {
       await uploadDocument(formData);
       setIsLoading(false);

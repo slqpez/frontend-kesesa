@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Switch, Route } from "react-router-dom";
 import Documents from "components/Body/Documents/Documents";
 import Home from "components/Body/Home/Home";
@@ -16,11 +16,11 @@ export default function Body() {
 console.log(user)
 
 
-useEffect(() => {
+/* useEffect(() => {
   let path = window.location.pathname.split("/")[1]
   let title = path.charAt(0).toUpperCase() + path.slice(1)
   document.title = `Kesesa | ${title}`;
-});
+}); */
 
   return (
     <div>
@@ -31,7 +31,7 @@ useEffect(() => {
         <Route exact path="/travels">
           {authenticated ? <Travels /> : <Home />}
         </Route>
-        <Route exact path="/documents">
+        <Route exact path="/documents/:travelId">
           {authenticated ? <Documents /> : <Home />}
         </Route>
         
