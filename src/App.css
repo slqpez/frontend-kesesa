@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 :root{
-  --background-image: linear-gradient(to right, #3190CD 50%, #08E9FA)
+  --background: #F3E0BE;
+  --main-color: #4EA4D9;
+  --second-color: #F2C438;
+  --color3: #91D7F2;
+  --color4: #F2BB77;
+  --color5: #F2766B;
 }
 
 .App{
   font-family: 'Rubik', sans-serif;
-  background-image: var(--background-image); 
+  background: var(--background); 
   height: 100vh;
-  color: #fff;
+  color: #000;
   padding: 1.5em 2em;
   position: relative;
 }
