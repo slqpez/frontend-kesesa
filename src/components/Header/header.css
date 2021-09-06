@@ -1,5 +1,4 @@
-@media screen and (min-width:768px){
-  .btn-open-menu, .btn-close-menu{
+.btn-open-menu, .btn-close-menu{
     display: none;
   }
 
@@ -12,20 +11,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
   .nav-list{
     display: flex;
-    gap: 2em;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   
   li {
     list-style: none;
   }
   
-  a {
+  .nav-list a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color5);
+    font-weight: 700;
     font-size: 1.2rem;
   }
   
@@ -36,6 +38,7 @@
   .logo{
     width: 130px;
     height: 130px;
+    margin-right: 20px;
   }
 
   .btn-logout{
@@ -64,7 +67,7 @@
     font-size: 1.5em;
     margin-left: 20px;
   }
-}
+
 
 
 @media screen and (min-width:480px) and (max-width:767px){

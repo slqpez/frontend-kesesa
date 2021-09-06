@@ -1,0 +1,55 @@
+.travels-body{
+display: flex;
+flex-direction: column;
+margin: 2em;
+}
+
+.travels-body > h2{
+  align-self: center;
+  font-size: 2.3em;
+  margin-bottom: 1.5em;
+}
+
+.travels-content{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.travels-aside{
+background-color: var(--color4);
+
+}
+
+.travelContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.travelContainer form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.travelContainer input{
+  padding:.4em;
+  border:none;
+  outline:none;
+}
+
+.travelContainer  button{
+  display:block;
+  border: none;
+  padding:1em;
+  font-weight: 700;
+  font-size: 1em;
+  background-color: var(--color3);
+  cursor: pointer;
+}
+
+.travelContainer  button:hover{
+  background-color: rgb(118, 168, 212);
+}

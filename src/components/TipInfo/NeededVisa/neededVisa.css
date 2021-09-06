@@ -1,4 +1,4 @@
-h2 {
+.title__container>h2 {
     display: none;
 }
 
@@ -7,7 +7,7 @@ h2 {
     .title__container{
         text-align: center;
     }
-    h2{
+    .title__container>h2{
         display: block;
         font-size: 1.95em;
     }

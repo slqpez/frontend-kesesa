@@ -18,7 +18,8 @@ function FullDocument() {
       .catch((error) => console.log(error));
   }, [id]);
   return (
-    <div>
+    <div className="full-document">
+      <button className="back" onClick={() => history.goBack()}>Volver</button>
       <Document
         file={document.url}
         noData={
@@ -29,7 +30,6 @@ function FullDocument() {
       >
         <Page pageNumber={1} style={{ width: "1000px" }} />
       </Document>
-      <button className="back" onClick={() => history.goBack()}>Volver</button>
     </div>
   );
 }

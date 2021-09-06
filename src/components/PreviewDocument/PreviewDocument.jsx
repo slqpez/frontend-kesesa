@@ -2,13 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Document, pdfjs, Page } from "react-pdf";
 import "./previewDocument.css";
+import swal from 'sweetalert'
 
-function PreviewDocument({ url, id, handleDelete }) {
+function PreviewDocument({ url, id, handleDelete,name }) {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   return (
     <div>
       <div>
+      <button onClick={handleDelete} className="btn-delete" data-id ={id}>
+        Eliminar
+      </button>
+       
         <Link to={`/document/${id}`}>
           <Document
             file={url}
@@ -22,9 +27,7 @@ function PreviewDocument({ url, id, handleDelete }) {
           </Document>
         </Link>
       </div>
-      <button onClick={handleDelete} className="btn-delete">
-        Eliminar
-      </button>
+      <p className="name-document">{name}</p>
     </div>
   );
 }
