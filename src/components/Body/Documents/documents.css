@@ -12,7 +12,6 @@
 .documents-list-section{
     text-align: center;
     width:70%;
-    height:calc(100vh - 200px);
     overflow-y: auto;
     overflow-x: hidden;
    

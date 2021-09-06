@@ -1,32 +1,41 @@
-
-/* import { useContext } from "react";
- *//* import GoogleBtn from "components/GoogleBtn/GoogleBtn";
-/* import UserContext from "context/userContext"; */
-import plane from "images/plane.png";
 import "./home.css";
-import Slider from "components/Slider/Slider";
+import masViajes from "images/masViajes.png";
+import { Link } from "react-router-dom";
+import GoogleBtn from "components/GoogleBtn/GoogleBtn";
 
 function Home() {
-/*   const {user:{authenticated}}=useContext(UserContext)
- */  return (
-      <div className="grid-container">
-        <div className="text-section grid-item" >
-          <Slider className="grid-item"></Slider>
-{/*           <h1>GESTIONA TUS DOCUMENTOS</h1>
-          <p className="text-section-paragraph">
-            Almacena, gestiona y organiza bien tus viajes a solo un click de
-            distancia.
-          </p>
-         {authenticated ? null: <GoogleBtn
-            text="Ingresar con Google"
+  /*   const {user:{authenticated}}=useContext(UserContext)
+   */ return (
+    <div className="home-container">
+      <div className="home-container-left">
+        <p>Haz tus viajes más sencillos</p>
+        <h1>
+        ¡Organiza tus <span>documentos</span> en un solo lugar!
+        </h1>
+        <h3>Dedica tiempo al viaje y no pierdas tus documentos.</h3>
+        <div className="home-container-btn">
+          <GoogleBtn
+            text="Empieza con Google."
             typeBtn="btn-home"
-            typeIcon="btn-icon"
-          />}  */}
+            typeIcon="btn-icon "
+          ></GoogleBtn>
+          <Link to="/about" className="btn-right">
+            Conocenos
+          </Link>
         </div>
-        <div className="image-section grid-item">
-          <img className="plane-image" src={plane} alt="plane"></img>
+        <div className="destination-container">
+          <Link to="#">
+            <img src={masViajes} alt="Travels" />
+          </Link>
+          <div className="destination-container-text">
+            <h4>Lugares populares.</h4>
+            <hr />
+            <p>Conoce más de 5.000 lugares turisticos y obten los mejores consejos.</p>
+          </div>
         </div>
       </div>
+      <div className="home-container-right"></div>
+    </div>
   );
 }
 

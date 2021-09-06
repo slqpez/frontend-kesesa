@@ -1,22 +1,10 @@
-.travel-item{
-  color:blue;
-}
-
-.travels-list{
-  background: url("../../images/plane.jpg") no-repeat;
-  background-size: cover;
-  background-position:center;
-  max-width:900px;
-  display:flex;
-  justify-content: center;
+.travels-list {
+  max-width: 900px;
+  display: flex;
   text-align: center;
   gap: 2.5em;
-  padding:2em;
-  flex-wrap:wrap;
-  height:300px;
+  padding: 0em 2em;
+  flex-wrap: wrap;
+  max-height: 500px;
   overflow-y: auto;
 }
-
-
-
-

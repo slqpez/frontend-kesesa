@@ -13,9 +13,14 @@
   font-family: 'Rubik', sans-serif;
   background: var(--background); 
   height: 100vh;
+  max-width: 1470px;
+  margin: 0 auto;
   color: #000;
   padding: 1.5em 2em;
   position: relative;
+  box-shadow: 1px 1px 6px 2px rgb(151, 146, 146);
+  overflow-y: auto;
+
 }
 
 

@@ -21,11 +21,13 @@
 
   .btn-delete{
     width: 200px;
+    position:relative;
     background-color: rgb(163, 16, 16);
-    margin-bottom: 30px;
+    margin-top: 30px;
     color:white;
     padding: 8px;
     border: none;
+    z-index: 2;
     cursor: pointer;
   }
 
@@ -34,8 +36,8 @@
   }
   
   .name-document{
-    text-align: left;
-    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 20px;
     margin-left: 10px;
     font-weight: 700;
     text-transform: capitalize;

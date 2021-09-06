@@ -1,25 +1,30 @@
 .btn-delete-travel{
-  background-color: rgb(163, 16, 16);
+  background-color: rgb(211, 109, 41);
   color: #fff;
   border: none;
   padding:.5em;
   margin-top: 10px;
   cursor: pointer;
+  width: 100px;
+
 }
 
 .btn-delete-travel:hover{
   background-color: rgba(163, 16, 16,.8);
 }
 
+
+.bubble-countrie li{
+list-style: none;
+}
 .bubble-countrie a{
   color:#000;
   display: block;
   font-weight: 700;
   font-size: 1.2em;
-  background-color:rgb(119, 161, 119);
+  background-color:rgb(247, 255, 248);
   padding:1em;
-  border-radius: 10px;
-  width: 150px;
+  width: 100px;
   height:100%;
   text-decoration: none;
   text-transform: capitalize;
@@ -28,4 +33,9 @@
 
 .bubble-countrie a:hover{
   color: green;
+}
+
+.countrie-name{
+  text-transform: capitalize;
+  margin-bottom: 5px;
 }
