@@ -1,7 +1,8 @@
 import React,{ useEffect, useState} from "react";
 import {Link} from "react-router-dom"
+import "./bubbleCountrie.css"
 
-function BubbleCountrie({ name, id}) {
+function BubbleCountrie({ name, id, handleDelete}) {
 
 
 
@@ -21,12 +22,13 @@ const style={
   },[name])
 
   return (
-    <div>
+    <div className="bubble-countrie">
       <li >
         <Link className="travel-item" to={`/documents/${id}`} style={style}>
           {name}
         </Link>
       </li>
+      <button className="btn-delete-travel" data-id={id} onClick={handleDelete}>Eliminar</button>
     </div>
   );
 }

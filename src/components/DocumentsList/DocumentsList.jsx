@@ -16,6 +16,17 @@ function DocumentsList({documentAdded, isLoading }) {
 
   const {travelId} = useParams()
 
+  useEffect(() => {
+    const data = { travelId };
+    getDocuments(data)
+      .then((response) => response.json())
+      .then((data) => {
+        setDocuments(data);
+        setDelete(false);
+      })
+      .catch((err) => console.log(err));
+  }, [travelId, documentAdded, isLoading, deleteThis]);
+
    function handleDelete (e) {
 
     const id = e.target.getAttribute('data-id')
@@ -25,7 +36,7 @@ function DocumentsList({documentAdded, isLoading }) {
       if(value){
         deleteDocument(id)
         .then(res=>{
-          swal(`Eliminaste el documento`,{
+          swal(`Eliminaste el documento 📃.`,{
             icon: "success",
             
           }).then(value => {
@@ -44,16 +55,7 @@ function DocumentsList({documentAdded, isLoading }) {
     })  
   }
 
-  useEffect(() => {
-    const data = { travelId };
-    getDocuments(data)
-      .then((response) => response.json())
-      .then((data) => {
-        setDocuments(data);
-        setDelete(false);
-      })
-      .catch((err) => console.log(err));
-  }, [travelId, documentAdded, isLoading, deleteThis]);
+ 
 
   if(!(documents.length > 0)) return <h3>Aún no tienes documentos. !Agrega uno!</h3>
 

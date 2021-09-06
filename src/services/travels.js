@@ -20,11 +20,11 @@ export async function getTravels(userId){
  })
 }
 
-/* export async function deleteDocument(id){
-  return fetch(`${BASE_URL}/documents/deleteDocument/${id}`, {
+export async function deleteTravel(id){
+  return fetch(`${BASE_URL}/deleteTravel/${id}`, {
    method:"DELETE",
    headers: {
     'Content-Type': 'application/json',
   }
  })
-} */
+}

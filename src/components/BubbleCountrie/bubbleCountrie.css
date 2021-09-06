@@ -1,0 +1,31 @@
+.btn-delete-travel{
+  background-color: rgb(163, 16, 16);
+  color: #fff;
+  border: none;
+  padding:.5em;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-delete-travel:hover{
+  background-color: rgba(163, 16, 16,.8);
+}
+
+.bubble-countrie a{
+  color:#000;
+  display: block;
+  font-weight: 700;
+  font-size: 1.2em;
+  background-color:rgb(119, 161, 119);
+  padding:1em;
+  border-radius: 10px;
+  width: 150px;
+  height:100%;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+
+.bubble-countrie a:hover{
+  color: green;
+}

@@ -18,17 +18,5 @@
 }
 
 
-.travels-list a{
-  color:#000;
-  display: block;
-  font-weight: 700;
-  font-size: 1.2em;
-  background-color:rgb(119, 161, 119);
-  padding:1em;
-  border-radius: 20px;
-  width: 150px;
-  height:100%;
-  text-decoration: none;
-  box-shadow:1px 1px 10px 3px rgb(15, 42, 194);
-}
+
 
