@@ -40,19 +40,38 @@ const Header = () => {
               <span>{user.name}</span>
             </div>
             <div className="nav-list-container">
-              <ul className="nav-list">
+              <button className="btn-open-menu" onClick={handleBurger}>
+                <img src={hamburger} alt="Abrir Menu" />
+              </button>
+              <ul className={`nav-list ${show}`}>
+                <button className="btn-close-menu" onClick={handleClose}>
+                  <img src={cerrar} alt="Cerrar Menu" />
+                </button>
                 <li>
-                  <Link to="/travels">Mis viajes</Link>
+                  <Link to="/travels" onClick={handleClose}>
+                    Mis viajes
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/infoCountries">¿Dónde viajar?</Link>
+                  <Link to="/infoCountries" onClick={handleClose}>
+                    ¿Dónde viajar?
+                  </Link>
                 </li>
-                <li>
-                  <Link to="/travelTips">Tips de viaje</Link>
+                <li className="last-child">
+                  <Link to="/travelTips" onClick={handleClose}>
+                    Tips de viaje
+                  </Link>
+                </li>
+                <li className="btn-header-salir-responsive">
+                  <div className="btn-container">
+                    <button className="btn-logout" onClick={handleLogoutClick}>
+                      Salir
+                    </button>
+                  </div>
                 </li>
               </ul>
             </div>
-            <div className="btn-container">
+            <div className="btn-container btn-header-salir">
               <button className="btn-logout" onClick={handleLogoutClick}>
                 Salir
               </button>
@@ -81,14 +100,23 @@ const Header = () => {
                     Acerca de
                   </Link>
                 </li>
-                <li>
+                <li className="last-child">
                   <Link to="/travelTips" onClick={handleClose}>
                     Tips de Viaje
                   </Link>
                 </li>
+                <li className="btn-header-google-responsive">
+                  <div className="btn-container">
+                    <GoogleBtn
+                      text="Ingresar"
+                      typeBtn="nav-btn"
+                      typeIcon="nav-icon"
+                    />
+                  </div>
+                </li>
               </ul>
             </div>
-            <div className="btn-container">
+            <div className="btn-container btn-header-google">
               <GoogleBtn
                 text="Ingresar"
                 typeBtn="nav-btn"
