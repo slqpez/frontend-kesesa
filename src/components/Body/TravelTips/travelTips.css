@@ -2,14 +2,17 @@
     width: 100%;
     height: 100%;
     display: flex;
+
+
 }
 
 .aside__tip-list{
-    flex-grow: 0.1;
+    width: 25%;
 }
 
 .aside__tip-list-ul{
     cursor: pointer;
+    list-style: none;
 }
 
 .aside__tip-list-ul li{
@@ -17,13 +20,25 @@
 
 }
 
+.aside__tip-list-ul li:hover{
+    color: var(--color5);
+
+}
+
 .tip-detailed{
-    flex-grow: 0.9;
+    width: 75%;
     margin-left: 3vw;
+    
+
 }
 
 .aside__tip-list-btn{
     display: none;
+}
+
+.title_tips-list-mobile-conteiner{
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 
@@ -39,7 +54,7 @@
         align-content: center;
         justify-content: center;
         display: flex;
-        padding-bottom: 2vh;
+        margin-bottom: 2vh;
     }
 
     .title__tip-list-mobile{
@@ -48,36 +63,36 @@
 
     .aside__tip-list{   
         display: none;
-        position: fixed;
+        position: absolute;
         width: max-content;
         height: max-content;
-        background-color:  #256C99;
+        background-color:  #fff;
         z-index: 40;
         overflow-y: auto;
         left: 0;
         border-radius: 4%;
+        padding: 5px
     }
 
     .aside__tip-list-ul{
         margin: 10px;
-        background-color: #12364D;
+        background-color: #3190CD;
         border-radius: 4%;
     }
 
 
     .aside__tip-list-ul li{
-        margin-bottom: 0vh;
+        margin-bottom: 10px;
+        padding: 10px 5px;
         display: flex;
         justify-content: center;
         align-content: center;
         flex-direction: column;
+        text-align: center;
+        color: #fff;
+        
     }
 
-
-    .aside__tip-list-ul li:hover{
-        background: #73AFD5;
-        border-radius: 5%;
-    }
 
 
     .tip-detailed{

@@ -1,15 +1,25 @@
-.title__container>h2 {
-    display: none;
+.title__container {
+  text-align: center;
+}
+.neededVisa__container {
+  margin-top: 15px;
 }
 
-@media screen and (min-width:0px) and (max-width:767px){
+.neededVisa__container p {
+  text-align: left;
+  font-size: 1.1em;
+}
 
-    .title__container{
-        text-align: center;
-    }
-    .title__container>h2{
-        display: block;
-        font-size: 1.95em;
-    }
+.neededVisa__container img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  width: 30%;
+  float: left;
+}
 
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .neededVisa__container img {
+    width: 60%;
+  }
 }
