@@ -26,6 +26,8 @@ const Header = () => {
     setShow("");
   }
 
+
+
   return (
     <>
       <nav className="nav-bar">
@@ -34,10 +36,10 @@ const Header = () => {
             <div className="userInfo">
               <img
                 className="profile-picture"
-                src={user.profileImage}
+                src={user?.profileImage}
                 alt="profile"
               />
-              <span>{user.name}</span>
+              <span>{user?.name}</span>
             </div>
             <div className="nav-list-container">
               <ul className="nav-list">

@@ -52,7 +52,7 @@ const [isDelete, setDelete] = useState(false)
   return (
     <div>
        <ul className="travels-list">
-          {travels.map((travel) => (
+          {travels?.map((travel) => (
            <BubbleCountrie key={travel._id} name={travel.name} id={travel._id} handleDelete={handleDelete}/>
           ))}
         </ul>

@@ -6,6 +6,8 @@ import Spinner from "components/Spinner/Spinner";
 import Message from "components/utils/Message/Message";
 import UserContext from "context/userContext";
 import { uploadDocument } from "services/uploadDocument";
+import Calendar from 'react-calendar';
+
 import "./documents.css";
 
 function Documents() {
@@ -98,10 +100,16 @@ function Documents() {
           content={message.content}
           type={message.type}
         ></Message>
+         <Calendar
+       
+       />
+       
       </section>
+      
       <section className="documents-list-section">
         <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
       </section>
+     
     </div>
   );
 }

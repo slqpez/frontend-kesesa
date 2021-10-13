@@ -1,7 +1,6 @@
 import React,{ useEffect, useState} from "react";
 import {Link} from "react-router-dom"
 import "./bubbleCountrie.css"
-import bg from "images/bg-travel.png"
 
 function BubbleCountrie({ name, id, handleDelete}) {
 
@@ -11,31 +10,15 @@ const [flag, setFlag]= useState("")
 const [hasImage, setHasImage] = useState(true)
 
 
-let style = {}
 
-if(hasImage){
-    style={
+
+
+   const style={
     backgroundImage:`url(${flag})`,
     backgroundSize:"100% 100%",
     backgroundRepeat:"no-repeat"
   }
-}else{
-  style={
-    backgroundImage:`url(${bg})`,
-    backgroundSize:"100% 100%",
-    backgroundRepeat:"no-repeat"
-  }
-}
 
-
-  useEffect(() => {
-    fetch(`https://restcountries.eu/rest/v2/name/${name}`)
-    .then((response) => response.json())
-    .then(data => setFlag(data[0].flag))
-    .catch((error) => {
-      setHasImage(false)
-    })
-  },[name])
 
   return (
     <div className="bubble-countrie">

@@ -1,5 +1,5 @@
 import "./home.css";
-import masViajes from "images/masViajes.png";
+import masViajes from "images/masViajes.jpg";
 import { Link } from "react-router-dom";
 import GoogleBtn from "components/GoogleBtn/GoogleBtn";
 
