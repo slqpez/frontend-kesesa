@@ -1,3 +1,48 @@
-.info{
-    margin-top: 20px;
+.containerInfo{
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    height: 30%;
+    background: #fff;
+    border-radius: 6px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.titleContainer h2{
+    margin-top: 8px;
+    color: #3190CD;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 22.5px;
+}
+
+.titleContainer input{
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 100%;
+    height: auto;
+    padding: 0 20px 2px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.titleContainer p{
+    font-family:'Courier New', Courier, monospace;
+    font-size:medium;
+    text-decoration: blink;
+    padding: .1em;
+}
+
+.numberPhones{
+    text-indent: 220px;
 }
