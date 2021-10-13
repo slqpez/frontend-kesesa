@@ -7,13 +7,14 @@ import Message from "components/utils/Message/Message";
 import UserContext from "context/userContext";
 import { uploadDocument } from "services/uploadDocument";
 import "./documents.css";
+import InfoCountries from "../InfoCountries/InfoCountries"
 
 function Documents() {
   const {
     user: { user },
   } = useContext(UserContext);
 
-  let { travelId } = useParams();
+  let { travelId, contryname } = useParams();
 
   const [name, setName] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
@@ -99,6 +100,7 @@ function Documents() {
           type={message.type}
         ></Message>
       </section>
+      <InfoCountries contryname={contryname}/>
       <section className="documents-list-section">
         <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
       </section>

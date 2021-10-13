@@ -2,34 +2,35 @@ import React,{useState, useEffect} from 'react'
 import {getInfoCountries} from "services/infoCountry"
 import "./infoCountries.css"
 
-function InfoCountries() {
+function InfoCountries({contryname}) {
 
 const [info, setInfo] = useState({})
 const[search, setSearch] = useState("")
-const [countryName, setCountryName] = useState("")
-
+/* const [countryName, setCountryName] = useState("")
+ */
      useEffect(()=>{
-       getInfoCountries(countryName)
+       getInfoCountries(contryname)
        .then(data=>setInfo(data))
        .catch(error=>console.log(error))
-    },[countryName]) 
+    },[contryname]) 
+
+    console.log(contryname)
 
     const handleSearch =(e)=>{
         setSearch(e.target.value)
     }
     const handleSubmit =(e)=>{
         e.preventDefault()
-        setCountryName(search)
-    }
+/*         setCountryName(search)
+ */    }
 
     return (
         <div className="containerInfo">
             <div className="titleContainer">
-                <h2>Consultar la información del país que desea visitar</h2>
+                <h2>Información del país de destino</h2>
             
             
                 <form action="" onSubmit={handleSubmit}>
-                    <input type="text" id="country" placeholder="Ingrese país a visitar" name="country" onChange={handleSearch} value={search}/>
                     <div className="info">
                     
                     {Object.keys(info).length !== 0?

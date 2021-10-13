@@ -31,7 +31,7 @@ console.log(user)
         <Route exact path="/travels">
           {authenticated ? <Travels /> : <Home />}
         </Route>
-        <Route exact path="/documents/:travelId">
+        <Route exact path="/documents/:travelId/:contryname">
           {authenticated ? <Documents /> : <Home />}
         </Route>
         
