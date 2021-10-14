@@ -24,7 +24,7 @@ const [hasImage, setHasImage] = useState(true)
     <div className="bubble-countrie">
       <li >
         <h4 className="countrie-name">{name}</h4>
-        <Link className="travel-item" to={`/documents/${id}`} style={style}>
+        <Link className="travel-item" to={`/documents/${id}/${name}`} style={style}>
         </Link>
       </li>
       <button className="btn-delete-travel" data-id={id} onClick={handleDelete}>Eliminar</button>

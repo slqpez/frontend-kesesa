@@ -6,16 +6,16 @@ import Spinner from "components/Spinner/Spinner";
 import Message from "components/utils/Message/Message";
 import UserContext from "context/userContext";
 import { uploadDocument } from "services/uploadDocument";
-import Calendar from 'react-calendar';
 
 import "./documents.css";
+import InfoCountries from "../InfoCountries/InfoCountries"
 
 function Documents() {
   const {
     user: { user },
   } = useContext(UserContext);
 
-  let { travelId } = useParams();
+  let { travelId, contryname } = useParams();
 
   const [name, setName] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
@@ -103,7 +103,7 @@ function Documents() {
         
        
       </section>
-      
+      <InfoCountries contryname={contryname}/>
       <section className="documents-list-section">
         <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
       </section>

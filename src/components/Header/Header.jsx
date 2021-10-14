@@ -55,8 +55,8 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/infoCountries" onClick={handleClose}>
-                    ¿Dónde viajar?
+                  <Link to="/about" onClick={handleClose}>
+                    Acerca de
                   </Link>
                 </li>
                 <li className="last-child">
