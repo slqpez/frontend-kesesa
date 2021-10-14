@@ -1,16 +1,22 @@
 .containerInfo{
     display: flex;
     justify-content: center;
-    width: 55%;
-    height: 30%;
+    width: 100%;
+    gap: 1em;
+    height: auto;
     background: #fff;
     border-radius: 6px;
-    margin-right:auto;
-    margin-left:auto;
+ padding:1em;
+}
+
+.info-ps{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
 }
 .titleContainer h2{
     margin-top: 8px;
-    color: #3190CD;
+    color: rgb(12, 12, 12);
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -39,10 +45,6 @@
 .titleContainer p{
     font-family:'Courier New', Courier, monospace;
     font-size:medium;
-    text-decoration: blink;
     padding: .1em;
 }
 
-.numberPhones{
-    text-indent: 220px;
-}

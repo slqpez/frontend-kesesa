@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom";
 import DocumentsList from "components/DocumentsList/DocumentsList";
 import FormAddCocument from "components/FormAddDocument/FormAddCocument";
 import Spinner from "components/Spinner/Spinner";
@@ -8,7 +8,7 @@ import UserContext from "context/userContext";
 import { uploadDocument } from "services/uploadDocument";
 
 import "./documents.css";
-import InfoCountries from "../InfoCountries/InfoCountries"
+import InfoCountries from "../InfoCountries/InfoCountries";
 
 function Documents() {
   const {
@@ -86,29 +86,30 @@ function Documents() {
   };
 
   return (
-    <div className="Documents">
-      <section className="add-document-section">
-        <FormAddCocument
-          addDocument={addDocument}
-          handleFile={handleFile}
-          handleName={handleName}
-          value={name}
-        />
-        {isLoading ? <Spinner /> : null}
-        <Message
-          showMessage={message.show}
-          content={message.content}
-          type={message.type}
-        ></Message>
+    
+      <div className="Documents">
+        <section className="add-document-section">
+          <FormAddCocument
+            addDocument={addDocument}
+            handleFile={handleFile}
+            handleName={handleName}
+            value={name}
+          />
+          {isLoading ? <Spinner /> : null}
+          <Message
+            showMessage={message.show}
+            content={message.content}
+            type={message.type}
+          ></Message>
+           <InfoCountries contryname={contryname} />
+        </section>
+        <section className="documents-list-section">
+          <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
+        </section>
         
        
-      </section>
-      <InfoCountries contryname={contryname}/>
-      <section className="documents-list-section">
-        <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
-      </section>
-     
-    </div>
+      </div>
+    
   );
 }
 
