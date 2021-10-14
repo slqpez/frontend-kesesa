@@ -2,13 +2,13 @@
     margin-bottom: 100px;
     border: none;
     padding:10px;
-    background-color: blue;
+    background-color: #01579B;
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
 }
 .back:hover{
-    background-color:rgb(11, 54, 109);
+    background-color:#4d81a8;
 }
 
 .full-document{
@@ -16,8 +16,9 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden !important;
-    background-color:rgb(24, 23, 23);
-    padding:2em;border: 10px solid black;
+    background-color:rgba(24, 23, 23,.7);
+    padding:2em;
+    border: 2px solid black;
 }
 
 .full-document .react-pdf__Document{
@@ -26,7 +27,7 @@
 .full-document .react-pdf__Page{
     width:700px !important;
     height:100vh !important;
-    background-color: rgb(6, 7, 7);
+    /* background-color: rgb(6, 7, 7); */
     box-shadow: none;
     overflow: hidden;
     overflow: hidden !important;

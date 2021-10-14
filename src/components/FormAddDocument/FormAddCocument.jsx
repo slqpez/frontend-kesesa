@@ -17,11 +17,9 @@ function FormAddCocument({addDocument, handleName, handleFile, value}) {
           onChange={handleName}
           value={value}
         />
-        <label htmlFor="file" className="label">
-          Selecciona un archivo
-        </label>
+       
         <input
-          className=" file"
+          className=" "
           id="file"
           type="file"
           name="file"

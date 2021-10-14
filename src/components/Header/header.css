@@ -4,6 +4,8 @@
   justify-content: space-between;
   margin-top: 2vh;
   margin-bottom: 4em;
+  border-bottom: 1px solid rgb(206, 202, 202);
+  padding-bottom: 20px;
 
 }
 
@@ -93,7 +95,16 @@
   display: none;
 }
 
-@media screen and (min-width:0px) and (max-width:767px){
+
+@media screen and (min-width:900px) and (max-width:1200px){
+  .nav-list li a {
+    
+    font-size: 1rem;
+  }
+  
+}
+
+@media screen and (min-width:0px) and (max-width:900px){
 
   .btn-open-menu, .btn-close-menu{
     display: block;

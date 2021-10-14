@@ -100,9 +100,7 @@ function Documents() {
           content={message.content}
           type={message.type}
         ></Message>
-         <Calendar
-       
-       />
+        
        
       </section>
       
