@@ -1,30 +1,28 @@
-.travels-body{
-display: flex;
-flex-direction: column;
-margin: 2em;
+.travels-body {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
 }
 
-.travels-body > h2{
+.travels-body > h2 {
   align-self: center;
   font-size: 2.3em;
   margin-bottom: 1.5em;
 }
 
-.travels-content{
-  display:flex;
+.travels-content {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2em;
 }
-.travels-aside{
-background-color: #fff;
-max-height: 230px;
-border-radius: 10px;
-color: #080808;
-
+.travels-aside {
+  background-color: #fff;
+  max-height: 230px;
+  border-radius: 10px;
+  color: #080808;
 }
 
-.travelContainer{
+.travelContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,30 +30,37 @@ color: #080808;
   padding: 1em;
 }
 
-.travelContainer form{
+.travelContainer form {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.travelContainer input{
-  padding:.5em;
+.travelContainer input {
+  padding: 0.5em;
   border: none;
-  border-bottom:2px solid #3190CD;
-  outline:none;
+  border-bottom: 2px solid #3190cd;
+  outline: none;
 }
 
-.travelContainer  button{
-  display:block;
+.travelContainer button {
+  display: block;
   border: none;
-  padding:1em;
+  padding: 1em;
   font-weight: 700;
   font-size: 1em;
-  background-color: #3190CD;
+  background-color: #3190cd;
   color: #fff;
   cursor: pointer;
 }
 
-.travelContainer  button:hover{
+.travelContainer button:hover {
   background-color: rgb(118, 168, 212);
+}
+
+
+@media screen and (min-width:0px) and (max-width:900px){
+  .travels-content {
+    justify-content: center;
+  }
 }

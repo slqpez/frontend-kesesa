@@ -50,6 +50,11 @@ const Header = () => {
                   <img src={cerrar} alt="Cerrar Menu" />
                 </button>
                 <li>
+                  <Link to="/" onClick={handleClose}>
+                    Home
+                  </Link>
+                </li>
+                <li>
                   <Link to="/travels" onClick={handleClose}>
                     Mis viajes
                   </Link>

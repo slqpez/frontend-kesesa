@@ -11,23 +11,19 @@ function About() {
       <div className="about__container-title">
         <h2>About</h2>
       </div>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque magni
-        praesentium, et dolorum dolores, vitae quas asperiores maiores provident
-        illo consectetur iusto cumque eveniet eaque blanditiis! Laborum unde
-        esse rerum? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Sit officiis incidunt illum alias numquam animi dicta nobis laboriosam
-        accusamus quas, fugit minima ad expedita tenetur vero. Quos nisi tenetur
-        ratione. Fugit neque deserunt magnam, dolorum esse itaque minima aliquam
-        laudantium. Similique fuga ea dolorem eaque dolorum dolores, commodi
-        possimus officia qui, ipsam ab. Quisquam molestiae obcaecati, quas
-        itaque officiis necessitatibus. Laborum facilis sed repudiandae velit
-        earum et. Similique placeat impedit error deleniti odio tempore sint
-        quod magni, quam consequatur? Magni sequi sapiente deleniti, iure unde
-        quas temporibus fugiat sint dolores. Vel perferendis reiciendis ratione.
-        Atque accusantium, non quibusdam blanditiis natus cumque ratione
-        cupiditate voluptas numquam labore magnam alias sit provident, ad, sint
-        ab? Ex, ducimus! Quisquam autem ipsum placeat ea! Ad voluptate harum
+      <p className="about__container-p">
+        Este aplicación fue realizada con fines académicos para el proyecto
+        integrador 1 de la carrera de ingeniería de sistemas en la universidad
+        de Antioquia. Se desarrolló en un lapso de 6 meses, por; Santiago López
+        Quiceno, Sebastián Gallego Pulgarín y Kevin Alonso Restrepo García.
+        <br />
+        <br />
+        Para su desarrollo se utilizaron tecnologías y herramientas como; React,
+        Node.Js, Mongo DB, Git, entre otras.
+        <br />
+        <br />
+        Agradecemos al profesor Carlos Mauricio Duque por el
+        acompañamiento durante todo el proceso del proyecto. 
       </p>
       <div className="about__container-team">
         <div className="about__container-title">
@@ -50,7 +46,7 @@ function About() {
               <img src={kevin} alt="" />
             </div>
             <div className="about__card-team-detail">
-              <p>Kevin Restrepo</p> 
+              <p>Kevin Restrepo</p>
               <a href="https://github.com/kevinrg27" target="_blank">
                 <img src={github} alt="" />
               </a>

@@ -34,6 +34,7 @@ function Documents() {
     setSelectedFile(e.target.files[0]);
   };
 
+
   const addDocument = async (e) => {
     e.preventDefault();
     if (!selectedFile) {
@@ -52,31 +53,46 @@ function Documents() {
     }
     const userId = user._id;
 
-    setIsLoading(true);
-    setDocumentAdded(true);
+    
+    
     let formData = new FormData();
     formData.append("file", selectedFile);
     formData.append("name", name);
     formData.append("userId", userId);
     formData.append("travelId", travelId);
-    try {
-      await uploadDocument(formData);
-      setIsLoading(false);
-      setDocumentAdded(false);
-      setName("");
-      setMessage({
-        show: true,
-        type: "success",
-        content: "Documento agregado correctamente.",
-      });
-    } catch (error) {
+    if (name.length > 0 && selectedFile.type === "application/pdf") {
+      try {
+        setIsLoading(true);
+        setDocumentAdded(true);
+        await uploadDocument(formData);
+        setIsLoading(false);
+        setDocumentAdded(false);
+        setName("");
+        setMessage({
+          show: true,
+          type: "success",
+          content: "Documento agregado correctamente.",
+        });
+      } catch (error) {
+        setMessage({
+          show: true,
+          type: "error",
+          content: `No se pudo agregar el documento`,
+        });
+      }
+    } else if(selectedFile.type !== "application/pdf"){
       setMessage({
         show: true,
         type: "error",
-        content: `No se pudo agregar el documento`,
+        content: `Formato de documento invalido. Solo .PDF`,
+      });
+    }else {
+      setMessage({
+        show: true,
+        type: "error",
+        content: `Ingresa un nombre para el documento`,
       });
     }
-
     setTimeout(() => {
       setMessage({
         show: false,
@@ -86,30 +102,26 @@ function Documents() {
   };
 
   return (
-    
-      <div className="Documents">
-        <section className="add-document-section">
-          <FormAddCocument
-            addDocument={addDocument}
-            handleFile={handleFile}
-            handleName={handleName}
-            value={name}
-          />
-          {isLoading ? <Spinner /> : null}
-          <Message
-            showMessage={message.show}
-            content={message.content}
-            type={message.type}
-          ></Message>
-           <InfoCountries contryname={contryname} />
-        </section>
-        <section className="documents-list-section">
-          <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
-        </section>
-        
-       
-      </div>
-    
+    <div className="Documents">
+      <section className="add-document-section">
+        <FormAddCocument
+          addDocument={addDocument}
+          handleFile={handleFile}
+          handleName={handleName}
+          value={name}
+        />
+        {isLoading ? <Spinner /> : null}
+        <Message
+          showMessage={message.show}
+          content={message.content}
+          type={message.type}
+        ></Message>
+        <InfoCountries contryname={contryname} />
+      </section>
+      <section className="documents-list-section">
+        <DocumentsList isLoading={isLoading} documentAdded={documentAdded} />
+      </section>
+    </div>
   );
 }
 

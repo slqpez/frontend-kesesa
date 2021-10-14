@@ -18,13 +18,6 @@ function PassportCare() {
           un momento del año con alta demanda.
           <br />
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-          doloribus necessitatibus reiciendis ut incidunt, aspernatur dolore
-          assumenda ad veniam, aut accusamus minima iste voluptate vitae quod
-          unde fuga quasi repellendus? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Aspernatur autem nisi esse iure mollitia illum non,
-          repudiandae necessitatibus pariatur, asperiores animi? Excepturi
-          doloribus quasi, animi tempore commodi consequuntur unde nemo.
         </p>
       </div>
     </div>

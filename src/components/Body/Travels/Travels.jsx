@@ -1,10 +1,14 @@
 import React, { useState, useContext } from "react";
 import UserContext from "context/userContext";
-import TravelsList from "components/TravelsList/TravelsList"
+import TravelsList from "components/TravelsList/TravelsList";
 import { addTravel } from "services/travels";
 import "./travels.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+const customId = "custom-id-yes";
 function Travels() {
+  
   const [place, setPlace] = useState("");
   const [isSearch, setIsSearch] = useState(false);
 
@@ -22,26 +26,36 @@ function Travels() {
     setPlace(e.target.value);
   };
 
-  const  handleSubmit = async (e) => {
-    setIsSearch(true)
+  const handleSubmit = async (e) => {
+    setIsSearch(true);
     e.preventDefault();
     if (place) {
       try {
-        await addTravel(newTravel)
-        setIsSearch(false)
+        await addTravel(newTravel);
+        setIsSearch(false);
         setPlace("");
         setIsSearch(!isSearch);
       } catch (error) {
         console.log(error);
       }
-     
     }
-    console.log("ingrese algo, perro");
+    toast.error("Ingrese un lugar de destino!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      toastId: customId,
+
+    });
   };
 
- 
   return (
     <div className="travels-body">
+      
+      <ToastContainer></ToastContainer>
       <h2>Mis viajes</h2>
       <div className="travels-content">
         <aside className="travels-aside">
@@ -61,7 +75,7 @@ function Travels() {
             </form>
           </div>
         </aside>
-        <TravelsList travelAdded={isSearch}userId={userId}/>
+        <TravelsList travelAdded={isSearch} userId={userId} />
       </div>
     </div>
   );

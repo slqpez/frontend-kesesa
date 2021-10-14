@@ -62,6 +62,8 @@
 
 .destination-container a img{
   max-width: 80px;
+  cursor: default;
+
 }
 
 .destination-container-text{
@@ -75,4 +77,19 @@
 
 .home-container-right{
   width: 50%;
+}
+
+.home-container-right img{
+  border-radius: 3%;
+}
+
+
+@media screen and (min-width:0px) and (max-width:900px){
+  .home-container-right{
+    display: none;
+  }
+
+  .home-container-left{
+    width: 100%;
+  }
 }

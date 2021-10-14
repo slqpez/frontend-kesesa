@@ -2,7 +2,10 @@
     text-align: center;
     margin-bottom: 1em;
 }
-
+.about__container-p{
+    font-size: 1.3em;
+    margin-bottom: 5em;
+}
 .about__container-team{
     margin-top: 1em;
 }

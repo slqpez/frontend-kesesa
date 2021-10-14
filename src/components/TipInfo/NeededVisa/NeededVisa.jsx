@@ -23,10 +23,6 @@ function NeededVisa() {
           fotografía del visado, que deben ser cumplidos escrupulosamente.
           <br />
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quam
-          eligendi in. Aut, fugiat, quisquam veritatis est animi odio et labore
-          sed qui velit consequatur. Consequuntur expedita quam porro
-          perspiciatis.
         </p>
       </div>
     </div>
